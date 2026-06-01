@@ -1,6 +1,6 @@
 import {test} from '@playwright/test';
 
-
+//alerts
 test("Learn Alerts", async ({page})=>{
 
     //page.once("dialog", async dialog => {

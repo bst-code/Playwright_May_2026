@@ -1,5 +1,6 @@
 import {test, chromium, firefox, webkit} from '@playwright/test';
 
+//test GIT
 test.skip("Open Browser manually", async ()=>{
 
     // Open the browser manually without using the 'page' fixture provided by Playwright
