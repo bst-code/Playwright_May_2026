@@ -15,23 +15,33 @@ export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
+  /* Opt out of parallel tests on CI. */
+  workers: process.env.CI ? 1 : 2,
+
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
-  /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  retries:  1,
+  
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   timeout: 60000, // Set the maximum time one test can run for. By default, tests are automatically killed after 30 seconds, if they are not finished by then. You can adjust this value based on your needs.
+  
+  expect: {
+    timeout: 10000, // Set the maximum time expect() should wait for the condition to be met. By default, expect() will wait for 5 seconds. You can adjust this value based on your needs.
+  },
+
+
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
      baseURL: 'https://playground.bsparksoftwaretechnologies.com/playwright-automation',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    video: 'on-first-retry', // Record video only when a test fails and is retried.
     headless: false, // Run tests in headed mode. nothing but browser can be seen visually
+
   },
 
   /* Configure projects for major browsers */
@@ -39,8 +49,9 @@ export default defineConfig({
     {
       name: 'QA',
       use: { ...devices['Desktop Chrome'],
-       
+
        },
+       
     },
 
     //  {
