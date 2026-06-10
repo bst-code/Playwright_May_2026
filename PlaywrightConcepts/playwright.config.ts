@@ -41,6 +41,7 @@ export default defineConfig({
     trace: 'on-first-retry',
     video: 'on-first-retry', // Record video only when a test fails and is retried.
     headless: false, // Run tests in headed mode. nothing but browser can be seen visually
+    storageState: './storage/auth.json' //Its used to login to application without entereing username and password
 
   },
 
@@ -53,6 +54,15 @@ export default defineConfig({
        },
        
     },
+
+    //  {
+    //   name: 'SuperAdmin',
+    //   use: { ...devices['Desktop Chrome'],
+    //      storageState: './storage/SuperAdmin_auth.json' 
+        
+    //    },
+       
+    // },
 
     //  {
     //   name: 'STG',
