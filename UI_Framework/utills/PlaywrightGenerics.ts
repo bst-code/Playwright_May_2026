@@ -40,8 +40,9 @@ export class PlaywrightGenerics
      */
     async getText(ele:Locator): Promise<string | null>
     {
-        await this.log(`getText: Getting text content from element`);
-        return await ele.textContent()
+        const data = await ele.textContent()
+        await this.log(`getText: Getting text content from element ${data}`);
+        return data
     }
 
     /**

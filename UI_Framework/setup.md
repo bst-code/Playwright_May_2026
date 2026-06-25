@@ -13,7 +13,7 @@ PlaywrightGenerics.ts
 3. selectValue(ele,value)
 
 Step 2:
-POM - Page object model --- Locate element and page method (business logic)
+POM - Page object model - Design patten --- Locate element and page method (business logic)
 We are going to use playwright generic method do design page methods - 
 
 Step 3:
