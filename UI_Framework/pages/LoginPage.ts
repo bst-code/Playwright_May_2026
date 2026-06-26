@@ -1,7 +1,7 @@
-import {Locator, Page, test} from "@playwright/test"
-import { PlaywrightGenerics } from "../utills/PlaywrightGenerics";
+import {Locator, Page} from "@playwright/test"
+import { BasePage } from "./BasePage";
 
-export class LoginPage extends PlaywrightGenerics
+export class LoginPage extends BasePage
 {
     // POM --> 1. Locate WebElements and 2. Write page methods 
 
@@ -11,7 +11,7 @@ export class LoginPage extends PlaywrightGenerics
     readonly LoginButton:Locator;
     readonly ErrorMsgEle:Locator;
 
-    constructor(page:Page){
+    constructor(page:Page){        
         super(page)
         this.emailEle = page.locator("#username")
         this.PasswordEle = page.locator("#pwd")
@@ -25,14 +25,14 @@ export class LoginPage extends PlaywrightGenerics
     async loginToApp(emailId:string,password:string):Promise<void>
     {
         //this.emailEle.fill("Bala")
-        this.enterText(this.emailEle,emailId)
-        this.enterText(this.PasswordEle,password)
-        this.clickElement(this.LoginButton)
+        await this.enterText(this.emailEle,emailId)
+        await this.enterText(this.PasswordEle,password)
+        await this.clickElement(this.LoginButton)
     }
 
     async getErrorMessage():Promise<string | null>
     {
-        const actualText = this.getText(this.ErrorMsgEle)       
+        const actualText = await this.getText(this.ErrorMsgEle)       
         return actualText
     }
 
