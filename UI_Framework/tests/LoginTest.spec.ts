@@ -21,9 +21,8 @@ test("Login with valid data", async ({page})=>{
 test("Login with Invalid data", async ({page})=>{
 
    // await page.goto("/login")
-
-     const loginObj = new LoginPage(page)
-     await loginObj.loginToApp("xyz@gmail.com", "test@1233564564456")
+    const loginObj = new LoginPage(page)
+    await loginObj.loginToApp("xyz@gmail.com", "test@1233564564456")
 
     const actualData = await loginObj.getErrorMessage()
     expect(actualData).toEqual("Invalid email or password")

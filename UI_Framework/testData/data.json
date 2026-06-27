@@ -1,0 +1,39 @@
+{
+    "globalData": {
+        "UserName": "jhon1@gmail.com",
+        "Password": "test@123"
+    },
+    "TC_001": {
+        "ExpectedDashboardUrl": "product-dashboard"
+    },
+    "TC_002": {
+        "UserName": "xyz@gmail.com",
+        "Password": "test@123366t6t",
+        "ExpectedErrorMsg": "Invalid email or password"
+    },
+    "TC_003": {
+        "ExpectedDashboardUrl": "product-dashboard",
+        "ProductName": "Iphone",
+        "ProductID": 1234
+    },
+
+    "Feature_1":
+    {
+        "Testcases_1": {
+            "Data": "Value"
+        },
+        "Testcases_2": {
+            "Data": "Value"
+        }
+    },
+
+    "Feature_2":
+    {
+        "Testcases_1": {
+            "Data": "Value"
+        },
+        "Testcases_2": {
+            "Data": "Value"
+        }
+    }
+}
