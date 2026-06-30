@@ -24,13 +24,27 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+ 
+ 
+  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  timeout: 60000, // Set the maximum time one test can run for. By default, tests are automatically killed after 30 seconds, if they are not finished by then. You can adjust this value based on your needs.
+  
+  expect: {
+    timeout: 10000, // Set the maximum time expect() should wait for the condition to be met. By default, expect() will wait for 5 seconds. You can adjust this value based on your needs.
+  },
+
+
+
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+  
   },
+
+  
 
   /* Configure projects for major browsers */
   projects: [

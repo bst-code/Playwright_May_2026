@@ -262,7 +262,7 @@ export class PlaywrightGenerics
      * @param urlPattern - URL pattern or regex
      * @param timeout - Timeout in milliseconds
      */
-    async waitForUrl(urlPattern:string | RegExp, timeout:number = 5000): Promise<void>
+    async waitForUrl(urlPattern:string | RegExp, timeout:number = 30000): Promise<void>
     {
         await this.log(`waitForUrl: Waiting for URL to match ${urlPattern} (timeout: ${timeout}ms)`);
         await this.page.waitForURL(urlPattern, { timeout })

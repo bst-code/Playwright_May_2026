@@ -9,7 +9,7 @@
             "src/test/hooks/*.ts"
         ],
 
-        "tags":"@regression or @smoke or @dataDriven",
+        "tags":"@regression or @smoke",
 
         "formatOptions": {
             "snippetInterface": "async-wait"

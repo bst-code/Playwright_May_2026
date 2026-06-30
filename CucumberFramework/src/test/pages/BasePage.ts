@@ -1,5 +1,5 @@
 import { Page } from '@playwright/test';
-import { PlaywrightGenerics } from '../utills/PlaywrightGenerics';
+import { PlaywrightGenerics } from '../utils/PlaywrightGenerics';
 
 export class BasePage extends PlaywrightGenerics {
 

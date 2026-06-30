@@ -4,162 +4,85 @@
     "elements": [
       {
         "description": "",
-        "id": "login-testcases;loing-with-valid-data---mutiple-users",
-        "keyword": "Scenario Outline",
-        "line": 21,
-        "name": "Loing with valid data - mutiple users",
+        "id": "login-testcases;login-with-valid-data",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Login with valid data",
         "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 609512999
+            }
+          },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 13,
+            "line": 6,
             "name": "I navigate to application URL \"https://playground.bsparksoftwaretechnologies.com/login\"",
             "match": {
-              "location": "src\\test\\stepDefinitions\\Login.step.ts:3"
+              "location": "src\\test\\stepDefinitions\\Login.step.ts:5"
             },
             "result": {
               "status": "passed",
-              "duration": 4034599
+              "duration": 2972334300
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 14,
-            "name": "I enter username as \"john1@gamil.com\" and password \"Test@123\"",
+            "line": 7,
+            "name": "I enter username as \"jhon1@gmail.com\" and password \"test@123\"",
             "match": {
-              "location": "src\\test\\stepDefinitions\\Login.step.ts:10"
+              "location": "src\\test\\stepDefinitions\\Login.step.ts:13"
             },
             "result": {
               "status": "passed",
-              "duration": 509999
+              "duration": 202514699
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 15,
+            "line": 8,
             "name": "I click Login button",
             "match": {
-              "location": "src\\test\\stepDefinitions\\Login.step.ts:17"
+              "location": "src\\test\\stepDefinitions\\Login.step.ts:21"
             },
             "result": {
               "status": "passed",
-              "duration": 382899
+              "duration": 1167993800
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 16,
-            "name": "I validate home page title",
-            "match": {
-              "location": "src\\test\\stepDefinitions\\Login.step.ts:24"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 292300
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 17,
-            "name": "I Validate element is displayed",
+            "line": 9,
+            "name": "I validate home page title \"/product-dashboard\"",
             "match": {
               "location": "src\\test\\stepDefinitions\\Login.step.ts:29"
             },
             "result": {
-              "status": "pending",
-              "duration": 179099
+              "status": "failed",
+              "duration": 30023818599,
+              "error_message": "page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"product-dashboard\" until \"load\"\n  navigated to \"https://playground.bsparksoftwaretechnologies.com/product-dashboard\"\n============================================================\n    at DashboardPage.<anonymous> (E:\\Coding\\PlayWright\\May_2026\\CucumberFramework\\src\\test\\utils\\PlaywrightGenerics.ts:268:25)\n    at fulfilled (E:\\Coding\\PlayWright\\May_2026\\CucumberFramework\\src\\test\\utils\\PlaywrightGenerics.ts:5:58)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 616170500
             }
           }
         ],
         "tags": [
           {
-            "name": "@dataDriven",
-            "line": 11
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "login-testcases;loing-with-valid-data---mutiple-users",
-        "keyword": "Scenario Outline",
-        "line": 22,
-        "name": "Loing with valid data - mutiple users",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 13,
-            "name": "I navigate to application URL \"https://playground.bsparksoftwaretechnologies.com/login\"",
-            "match": {
-              "location": "src\\test\\stepDefinitions\\Login.step.ts:3"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 301300
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 14,
-            "name": "I enter username as \"rajuvar34@newmail.com\" and password \"abc123@#\"",
-            "match": {
-              "location": "src\\test\\stepDefinitions\\Login.step.ts:10"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 645499
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 15,
-            "name": "I click Login button",
-            "match": {
-              "location": "src\\test\\stepDefinitions\\Login.step.ts:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 184299
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 16,
-            "name": "I validate home page title",
-            "match": {
-              "location": "src\\test\\stepDefinitions\\Login.step.ts:24"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 464300
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 17,
-            "name": "I Validate element is displayed",
-            "match": {
-              "location": "src\\test\\stepDefinitions\\Login.step.ts:29"
-            },
-            "result": {
-              "status": "pending",
-              "duration": 312100
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@dataDriven",
-            "line": 11
+            "name": "@smoke",
+            "line": 4
           }
         ],
         "type": "scenario"
